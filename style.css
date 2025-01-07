@@ -1,7 +1,45 @@
 *{
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 body{
     display: grid;
+    grid-template: 1fr / 1fr 5fr;
+    height: 100vh;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    line-height: 1.8rem;
+    background-color: #1e293b;
+    color: white;
+    /* font-size: calc(15px + 0.5vw); */
+}
+.sidebar img{
+    width: 2em;
+    height: 2em;
+}
+.logo-wrapper, .nav>div, .options>div{
+    display: flex;
+}
+.logo-wrapper>img{
+    width: 3em;
+    height: 3em;
+}
+
+
+.body{
+    display: grid;
+    grid-template: 1fr 6fr / 1fr;
+}
+.top, .bottom{
+    display: flex;
+}
+
+
+main{
+    display: grid;
+    grid-template: 1fr / 4fr 1fr;
 }
