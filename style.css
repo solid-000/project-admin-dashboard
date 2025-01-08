@@ -6,6 +6,7 @@
     --primary-color: #1e293b;
     --secondary-color: #e2e8f0;
     --third-color: #475569;
+    --shadow: rgba(1, 1, 1, 0.4); 
 
 }
 
@@ -101,6 +102,9 @@ header{
     font-size: 16px;
     font-family: sans-serif;
 }
+.search>input:focus{
+    outline: 1px solid var(--third-color);
+}
 .top-btn{
     background-repeat: no-repeat;
     background-size: 100%;
@@ -164,7 +168,7 @@ header{
 
 main{
     display: grid;
-    grid-template: 1fr / 2.5fr 1fr;
+    grid-template: 1fr / 3fr 1fr;
     background-color: var(--secondary-color);
     padding-left: 15px;
     
@@ -172,7 +176,8 @@ main{
 .project-wrapper{
     padding: 0 20px 30px 0;
 }
-.project-wrapper>h4{
+main h4{
+    font-size: 1.4rem;
     margin-bottom: 10px;
 }
 .projects{
@@ -187,7 +192,7 @@ main{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.4);
+    box-shadow: 2px 2px 2px var(--shadow);
     border-left: 10px solid var(--third-color);
 }
 .card-title{
@@ -228,4 +233,37 @@ main{
 .news{
     display: grid;
     grid-template: 1fr 1fr / 1fr;
+    padding-right: 20px;
+}
+
+.announcement{
+    display: flex;
+    flex-direction: column;
+}
+.announcement-container{
+    background-color: white;
+    flex: 1;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr;
+    padding: 45px 30px 15px 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--shadow);
+}
+.announcement-card{
+    border-bottom: 1px solid var(--third-color);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.announcement-card:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+}
+.announce-title{
+    font-weight: 700;
+    font-size: 0.9em;
+}
+.announce-content{
+    font-size: 0.8em;
+    overflow-y: auto;
 }
