@@ -279,6 +279,7 @@ main h4{
     flex-direction: column;
 }
 .trending-container{
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -286,6 +287,7 @@ main h4{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--shadow);
+    justify-content: center;
 }
 .trend-card{
     display: flex;
