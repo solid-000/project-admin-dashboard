@@ -7,6 +7,7 @@
     --secondary-color: #e2e8f0;
     --third-color: #475569;
     --shadow: rgba(1, 1, 1, 0.4); 
+    --font-color-secondary: gray;
 
 }
 
@@ -168,7 +169,7 @@ header{
 
 main{
     display: grid;
-    grid-template: 1fr / 3fr 1fr;
+    grid-template: 1fr / 4fr 1fr;
     background-color: var(--secondary-color);
     padding-left: 15px;
     
@@ -203,6 +204,7 @@ main h4{
 .card-content{
     font-size: 0.9em;
     overflow-y: auto;
+    color: var(--font-color-secondary);
 }
 .card-btn{
     align-self: flex-end;
@@ -231,9 +233,11 @@ main h4{
 }
 
 .news{
-    display: grid;
-    grid-template: 1fr 1fr / 1fr;
     padding-right: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .announcement{
@@ -266,4 +270,39 @@ main h4{
 .announce-content{
     font-size: 0.8em;
     overflow-y: auto;
+    color: var(--font-color-secondary);
+}
+
+.trending{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.trending-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--shadow);
+}
+.trend-card{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.trend-card>img{
+    height: 45px;
+    border-radius: 100%;
+}
+.trend-card>div{
+    font-size: 0.8em;
+    color: var(--font-color-secondary);
+}
+.trend-card>div>div{
+    font-weight: 550;
+    font-size: 1em;
+    margin-bottom: 3px;
+    color: black;
 }
